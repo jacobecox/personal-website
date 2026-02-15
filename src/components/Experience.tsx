@@ -1,25 +1,14 @@
+import Image from "next/image";
+
 const jobs = [
   {
-    title: "Senior Software Developer",
-    company: "Company Name",
-    period: "2023 – Present",
+    title: "Software Engineer",
+    company: "Control Plane",
+    period: "2025 – Present",
     description:
-      "Building and maintaining web applications using React, Next.js, and TypeScript. Leading front-end architecture decisions and mentoring junior developers.",
-  },
-  {
-    title: "Software Developer",
-    company: "Previous Company",
-    period: "2021 – 2023",
-    description:
-      "Developed full-stack features for client-facing products. Worked with Node.js, PostgreSQL, and React to deliver scalable solutions.",
-  },
-  {
-    title: "Junior Developer",
-    company: "First Company",
-    period: "2019 – 2021",
-    description:
-      "Started my professional career building internal tools and customer-facing web apps. Gained foundational skills in JavaScript, HTML/CSS, and REST APIs.",
-  },
+      "Building and maintaining cloud infrastructure on a multi-cloud platform spanning AWS, GCP, and Azure. Assisting customers with onboarding their infrastructure to the platform, creating Helm templates for popular open-source applications, and contributing to internal tooling and documentation to improve the developer experience.",
+    logo: "/cpln-icon.svg",
+  }
 ];
 
 export default function Experience() {
@@ -34,7 +23,18 @@ export default function Experience() {
               className="rounded-lg border border-border bg-card p-6"
             >
               <div className="mb-2 flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
-                <h3 className="text-lg font-semibold">{job.title}</h3>
+                <div className="flex items-center gap-3">
+                  {"logo" in job && job.logo && (
+                    <Image
+                      src={job.logo}
+                      alt={job.company}
+                      width={32}
+                      height={32}
+                      className="h-8 w-auto"
+                    />
+                  )}
+                  <h3 className="text-lg font-semibold">{job.title}</h3>
+                </div>
                 <span className="text-sm text-muted">{job.period}</span>
               </div>
               <p className="mb-3 text-sm font-medium text-primary">

@@ -1,28 +1,10 @@
 const clients = [
   {
-    name: "Client One",
+    name: "Anchor Baptist Church",
     description:
-      "Brief description of the work you did for this client and the impact it had.",
-    url: "https://clientone.com",
-  },
-  {
-    name: "Client Two",
-    description:
-      "What you built or improved for this client. Mention key outcomes if possible.",
-    url: "https://clienttwo.com",
-  },
-  {
-    name: "Client Three",
-    description:
-      "Another client project — what was the challenge and how did you help solve it?",
-    url: "https://clientthree.com",
-  },
-  {
-    name: "Client Four",
-    description:
-      "Describe the scope of work, technologies used, and results delivered.",
-    url: "https://clientfour.com",
-  },
+      "Built a modern, SEO-optimized church website with structured data markup, a custom admin panel for the pastor to manage events, edit service times, and monitor site traffic, along with a photo gallery, contact form, and live stream integration for remote visitors.",
+    url: "https://anchor-baptist-website.vercel.app/",
+  }
 ];
 
 export default function Clients() {
