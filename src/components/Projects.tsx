@@ -7,7 +7,7 @@ const projects: {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-12">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-8 text-3xl font-bold">Projects</h2>
         {projects.length > 0 ? (

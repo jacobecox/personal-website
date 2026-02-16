@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:justify-between">
           <div className="flex-1">
@@ -14,7 +14,7 @@ export default function Hero() {
             </h1>
             <p className="mb-8 max-w-2xl text-lg text-muted">
               I build modern web applications and help businesses bring their
-              ideas to life. Passionate about clean code, great user
+              ideas to life. I&apos;m passionate about clean code, great user
               experiences, and solving real problems with software.
             </p>
             <div className="flex gap-4">
@@ -25,7 +25,7 @@ export default function Hero() {
                 Get in Touch
               </a>
               <a
-                href="#projects"
+                href="#clients"
                 className="rounded-lg border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-card"
               >
                 View My Work

@@ -9,7 +9,7 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section id="clients" className="py-20">
+    <section id="clients" className="py-12">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-8 text-3xl font-bold">Clients</h2>
         <p className="mb-8 max-w-2xl text-muted">

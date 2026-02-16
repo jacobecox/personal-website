@@ -13,7 +13,7 @@ const jobs = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-12">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-8 text-3xl font-bold">Experience</h2>
         <div className="space-y-8">
