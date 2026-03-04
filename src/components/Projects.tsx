@@ -1,9 +1,19 @@
+import TechTags from "@/components/TechTags";
+
 const projects: {
   name: string;
   description: string;
   tech: string[];
   link: string;
-}[] = [];
+}[] = [
+  {
+    name: "Flourish",
+    description:
+      "A sourdough baking companion app that helps bakers manage recipes (with URL import), track starter health with a feeding timer and readiness checklist, and keep a baker's journal with photos, notes, and ratings linked to each bake.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "FusionAuth", "Cloudflare R2", "Control Plane"],
+    link: "https://flourishbake.com",
+  },
+];
 
 export default function Projects() {
   return (
@@ -21,16 +31,7 @@ export default function Projects() {
                 <p className="mb-4 flex-1 text-sm text-muted">
                   {project.description}
                 </p>
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                <TechTags tags={project.tech} />
                 <a
                   href={project.link}
                   target="_blank"
