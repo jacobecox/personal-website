@@ -37,7 +37,7 @@ export default function Hero() {
               src="/headshot.jpg"
               alt="Jacob Cox"
               fill
-              className="object-cover"
+              className="object-cover object-[center_15%] scale-115"
               priority
             />
           </div>
