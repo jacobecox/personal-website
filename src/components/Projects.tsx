@@ -1,3 +1,4 @@
+import Image from "next/image";
 import TechTags from "@/components/TechTags";
 
 const projects: {
@@ -5,13 +6,15 @@ const projects: {
   description: string;
   tech: string[];
   link: string;
+  screenshot?: string;
 }[] = [
   {
     name: "Flourish",
     description:
-      "A sourdough baking companion app that helps bakers manage recipes (with URL import), track starter health with a feeding timer and readiness checklist, and keep a baker's journal with photos, notes, and ratings linked to each bake.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "FusionAuth", "Cloudflare R2", "Control Plane"],
+      "A sourdough baking companion app with recipe management (including URL import), a baker's journal with photos and bake metrics, a starter tracker with feeding timer, and an AI assistant powered by Claude and RAG — giving it foundational sourdough knowledge alongside each user's own recipes and journal entries.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "pgvector", "Claude (Anthropic)", "Voyage AI", "FusionAuth", "Cloudflare R2", "Control Plane"],
     link: "https://flourishbake.com",
+    screenshot: "/flourish-website.png",
   },
 ];
 
@@ -21,25 +24,39 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-8 text-3xl font-bold">Projects</h2>
         {projects.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2">
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="group flex flex-col rounded-lg border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-primary/40"
+                className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-primary/40"
               >
-                <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-primary">{project.name}</h3>
-                <p className="mb-4 flex-1 text-sm text-muted">
-                  {project.description}
-                </p>
-                <TechTags tags={project.tech} />
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-primary hover:underline"
-                >
-                  View Project &rarr;
-                </a>
+                {project.screenshot && (
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src={project.screenshot}
+                      alt={`${project.name} screenshot`}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-primary">
+                    {project.name}
+                  </h3>
+                  <p className="mb-4 flex-1 text-sm text-muted">
+                    {project.description}
+                  </p>
+                  <TechTags tags={project.tech} />
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-primary hover:underline"
+                  >
+                    View Project &rarr;
+                  </a>
+                </div>
               </div>
             ))}
           </div>

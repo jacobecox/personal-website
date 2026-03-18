@@ -1,9 +1,12 @@
+import Image from "next/image";
+
 const clients = [
   {
     name: "Anchor Baptist Church",
     description:
       "Built a modern, SEO-optimized church website with structured data markup, a custom admin panel for the pastor to manage events, edit service times, and monitor site traffic, along with a photo gallery, contact form, and live stream integration for remote visitors.",
     url: "https://anchor-baptist-website.vercel.app/",
+    screenshot: "/anchor-baptist-website.png",
   },
 ];
 
@@ -23,15 +26,27 @@ export default function Clients() {
               href={client.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-lg border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-primary/40"
+              className="group overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-primary/40"
             >
-              <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-primary">
-                {client.name}
-              </h3>
-              <p className="mb-3 text-sm text-muted">{client.description}</p>
-              <span className="text-sm font-medium text-primary">
-                Visit Site &rarr;
-              </span>
+              {client.screenshot && (
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={client.screenshot}
+                    alt={`${client.name} website screenshot`}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-6">
+                <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-primary">
+                  {client.name}
+                </h3>
+                <p className="mb-3 text-sm text-muted">{client.description}</p>
+                <span className="text-sm font-medium text-primary">
+                  Visit Site &rarr;
+                </span>
+              </div>
             </a>
           ))}
         </div>
