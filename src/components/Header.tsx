@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { SiGithub } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -6,6 +8,11 @@ const navLinks = [
   { href: "#clients", label: "Clients" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
+];
+
+const socialLinks = [
+  { href: "https://github.com/jacobecox", label: "GitHub", Icon: SiGithub },
+  { href: "https://www.linkedin.com/in/jacobecox/", label: "LinkedIn", Icon: FaLinkedin },
 ];
 
 export default function Header() {
@@ -27,6 +34,20 @@ export default function Header() {
             </li>
           ))}
         </ul>
+        <div className="flex items-center gap-4">
+          {socialLinks.map(({ href, label, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-muted transition-colors hover:text-foreground"
+            >
+              <Icon className="h-5 w-5" />
+            </a>
+          ))}
+        </div>
       </nav>
     </header>
   );

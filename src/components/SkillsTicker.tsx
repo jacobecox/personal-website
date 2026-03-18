@@ -5,13 +5,13 @@ import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss,
   SiNodedotjs, SiPython, SiGo, SiVercel, SiExpress,
   SiPostgresql, SiMysql, SiMongodb, SiRedis, SiPrisma,
-  SiClickhouse, SiFusionauth,
+  SiClickhouse, SiFusionauth, SiResend,
   SiKubernetes, SiHelm, SiGooglecloud, SiDocker, SiGit, SiCloudflare, SiLinux,
 } from "react-icons/si";
 import { FaAws, FaMicrosoft, FaDatabase } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
-type Skill = { label: string; Icon?: IconType; color?: string; imgSrc?: string };
+type Skill = { label: string; Icon?: IconType; color?: string; imgSrc?: string; darkInvert?: boolean };
 
 const row1: Skill[] = [
   { label: "React",        Icon: SiReact,      color: "#61DAFB" },
@@ -36,6 +36,8 @@ const row2: Skill[] = [
   { label: "FusionAuth",       Icon: SiFusionauth,    color: "#FF4438" },
   { label: "Airflow",          imgSrc: "/airflow-icon.svg" },
   { label: "Vector Databases", Icon: FaDatabase,      color: "#6366F1" },
+  { label: "Resend",           Icon: SiResend },
+  { label: "Voyage AI", imgSrc: "/voyage-ai-icon.svg", darkInvert: true },
 ];
 
 const row3: Skill[] = [
@@ -93,7 +95,7 @@ function TickerRow({
           >
             {skill.imgSrc ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={skill.imgSrc} alt={skill.label} className="h-4 w-4 shrink-0" />
+              <img src={skill.imgSrc} alt={skill.label} className={`h-4 w-4 shrink-0${skill.darkInvert ? " dark:invert" : ""}`} />
             ) : skill.Icon ? (
               <skill.Icon style={{ color: skill.color }} className="h-4 w-4 shrink-0" />
             ) : (

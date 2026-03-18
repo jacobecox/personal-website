@@ -12,7 +12,7 @@ const projects: {
     name: "Flourish",
     description:
       "A sourdough baking companion app with recipe management (including URL import), a baker's journal with photos and bake metrics, a starter tracker with feeding timer, and an AI assistant powered by Claude and RAG — giving it foundational sourdough knowledge alongside each user's own recipes and journal entries.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "pgvector", "Claude (Anthropic)", "Voyage AI", "FusionAuth", "Cloudflare R2", "Control Plane"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "pgvector", "Claude (Anthropic)", "Voyage AI", "FusionAuth", "Cloudflare R2", "Resend", "Control Plane"],
     link: "https://flourishbake.com",
     screenshot: "/flourish-website.png",
   },
