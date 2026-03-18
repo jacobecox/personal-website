@@ -24,6 +24,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@keyframes ticker-left-px {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--t-offset, -50%)); }
+}
+
+@keyframes ticker-right-px {
+  from { transform: translateX(var(--t-offset, -50%)); }
+  to { transform: translateX(0); }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0f172a;

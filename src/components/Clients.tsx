@@ -4,7 +4,7 @@ const clients = [
     description:
       "Built a modern, SEO-optimized church website with structured data markup, a custom admin panel for the pastor to manage events, edit service times, and monitor site traffic, along with a photo gallery, contact form, and live stream integration for remote visitors.",
     url: "https://anchor-baptist-website.vercel.app/",
-  }
+  },
 ];
 
 export default function Clients() {
@@ -23,9 +23,9 @@ export default function Clients() {
               href={client.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary"
+              className="group rounded-lg border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-primary/40"
             >
-              <h3 className="mb-2 text-lg font-semibold group-hover:text-primary">
+              <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-primary">
                 {client.name}
               </h3>
               <p className="mb-3 text-sm text-muted">{client.description}</p>
