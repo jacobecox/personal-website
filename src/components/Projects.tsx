@@ -22,12 +22,18 @@ export default function Projects() {
   return (
     <section id="projects" className="py-12">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-8 text-3xl font-bold">Projects</h2>
+        <h2 className="mb-4 text-3xl font-bold">Projects</h2>
+        <p className="mb-8 max-w-2xl text-muted">
+          A collection of personal projects I&apos;ve built to solve real problems and explore new technologies.
+        </p>
         {projects.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2">
             {projects.map((project) => (
-              <div
+              <a
                 key={project.name}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-primary/40"
               >
                 {project.screenshot && (
@@ -48,16 +54,11 @@ export default function Projects() {
                     {project.description}
                   </p>
                   <TechTags tags={project.tech} />
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium text-primary hover:underline"
-                  >
+                  <span className="text-sm font-medium text-primary">
                     View Project &rarr;
-                  </a>
+                  </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         ) : (
