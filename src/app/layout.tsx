@@ -15,9 +15,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jacob Cox | Software Developer",
+  title: "Jacob Cox | Full Stack Software Engineer",
   description:
-    "Personal portfolio of Jacob Cox — software developer, builder, and problem solver.",
+    "Personal portfolio of Jacob Cox — full stack software engineer and cloud architect. Building modern web applications that solve real problems.",
+  metadataBase: new URL("https://jacobcox.dev"),
+  openGraph: {
+    title: "Jacob Cox | Full Stack Software Engineer",
+    description:
+      "Building modern web applications and cloud infrastructure that solve real problems.",
+    url: "https://jacobcox.dev",
+    siteName: "Jacob Cox",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jacob Cox | Full Stack Software Engineer",
+    description:
+      "Building modern web applications and cloud infrastructure that solve real problems.",
+  },
 };
 
 export default function RootLayout({
