@@ -2,6 +2,13 @@ import Image from "next/image";
 
 const clients = [
   {
+    name: "Flynn Nutrition",
+    description:
+      "Built a nutrition counseling website for Stevie Flynn, MS, RDN, featuring integrated Healthie booking for telehealth appointments, a contact form, client testimonials, and a mobile-responsive design centered around her 'Find Peace with Food' approach to intuitive eating.",
+    url: "https://www.flynnnutrition.com",
+    screenshot: "/flynnnutrition-website.png",
+  },
+  {
     name: "Anchor Baptist Church",
     description:
       "Built a modern, SEO-optimized church website with structured data markup, a custom admin panel for the pastor to manage events, edit service times, and monitor site traffic, along with a photo gallery, contact form, and live stream integration for remote visitors.",
