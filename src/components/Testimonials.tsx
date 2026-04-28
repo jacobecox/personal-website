@@ -1,5 +1,11 @@
 const testimonials = [
   {
+    name: "Stevie Flynn",
+    rating: 5,
+    body: "Incredibly happy with my experience using Jacob Cox to design my website as a private practice dietitian! Jacob listened intently to my requests, provided user-friendly, detailed instructions for items on my end, and truly brought my vision to life! I am confident my business will expand thanks to Jacob's expertise in web development! Jacob is so kind, patient, and respectful, would 100/10 recommend to anyone!!",
+    source: "Google",
+  },
+  {
     name: "Adam Batterson",
     rating: 5,
     body: "Jacob took care of our website for us! It's got everything we need, looks sharp, and easy to navigate. Thanks Jacob!",
