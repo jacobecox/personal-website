@@ -9,6 +9,14 @@ const projects: {
   screenshot?: string;
 }[] = [
   {
+    name: "PayClarity",
+    description:
+      "A paycheck-aware budgeting app built for households. Tracks bills, income schedules, planned expenses, and a discretionary buffer to show exactly how much you can save each paycheck. Includes a net worth tracker with connected accounts, a monthly calendar view, shared household support with an invite link, an agentic AI chat powered by Claude with streaming and tool use, and is installable as a PWA on iOS and Android.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Clerk", "Claude (Anthropic)"],
+    link: "https://payclarity.app",
+    screenshot: "/payclarity-website.png",
+  },
+  {
     name: "Flourish",
     description:
       "A sourdough baking companion app with recipe management (including URL import), a baker's journal with photos and bake metrics, a starter tracker with feeding timer, and an AI assistant powered by Claude and RAG — giving it foundational sourdough knowledge alongside each user's own recipes and journal entries.",
